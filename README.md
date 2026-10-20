@@ -32,8 +32,7 @@ The `.m3u8` files are channel playlists. Kayo and Binge themselves supply Widevi
 ## How to run
 
 ```sh
-cp .env.example .env
-# Enter your subscription credentials and Mac's local IP address in .env, then:
+python3 configure.py
 ./run.sh
 ```
 
