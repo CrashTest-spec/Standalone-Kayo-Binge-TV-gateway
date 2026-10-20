@@ -2,15 +2,13 @@
 
 ## Browser player
 
-Combined playlists and the browser also include Melbourne terrestrial TV services
-from the AU Freeview add-on's source: https://i.mjh.nz/au/Melbourne/tv.json.gz.
-Numbered TV services are included; FAST-only and DVB radio entries are excluded.
+Combined playlists and the browser also include Melbourne terrestrial TV services.
 Freeview uses HLS without the Binge/Kayo Widevine properties, preserves upstream
 request headers through a local proxy, and contributes its available programmes
 to the combined XMLTV guide. These are online simulcasts, not reception from a
 physical antenna. Availability depends on the source feed and broadcaster.
 
-On the gateway Mac, open http://localhost:8787 in Chrome and select a channel.
+On the gateway machine, open http://localhost:8787 in Chrome and select a channel.
 The page provides channel search, service filters, upcoming programmes and native
 video controls. Shaka Player loads from a pinned jsDelivr URL, so internet access
 is required. Playback uses the browser's Widevine CDM and the existing licence
@@ -19,8 +17,6 @@ proxy; the provider must accept the device and subscription.
 Widevine requires a secure context. Plain HTTP at a LAN IP is not sufficient:
 other devices require trusted HTTPS for the page, manifest, segments and licence
 proxy. Safari does not support this Widevine configuration.
-
-This service adapts the two Kodi add-ons into a standalone HTTP gateway. It publishes extended M3U playlists and XMLTV guides to devices on the same local network.
 
 ## What it provides
 
